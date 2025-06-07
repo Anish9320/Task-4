@@ -7,10 +7,10 @@ const { CreateAndUploadThumbnail, CreateAndUploadWatermark } = require('./imageP
 
 const connection = new IORedis({
     host:process.env.REDIS_HOST,
-    port:process.env.REDIS_PORT,
+    port:Number(process.env.REDIS_PORT),
     maxRetriesPerRequest: null,
     password:process.env.REDIS_PASSWORD,
-    tls: true
+    tls: {}
 });
 const imageQueue = new Queue('image-processing',{connection})
 
