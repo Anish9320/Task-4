@@ -6,7 +6,7 @@ const cors = require("cors")
 const app = express()
 
 app.use(cors({
-    origin: ['http://localhost:3000,https://sspd-frontend.vercel.app'],
+    origin: ['http://localhost:3000','https://sspd-frontend.vercel.app'],
     methods:['GET','POST','PUT','DELETE'],
     credentials:true
 }))
