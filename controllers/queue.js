@@ -9,7 +9,7 @@ const connection = new IORedis({
     host:process.env.REDIS_HOST,
     port:process.env.REDIS_PORT,
     maxRetriesPerRequest: null,
-    password:process.env.PASSWORD,
+    password:process.env.REDIS_PASSWORD,
     tls: true
 });
 const imageQueue = new Queue('image-processing',{connection})
